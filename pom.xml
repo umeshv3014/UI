@@ -30,13 +30,14 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.0.0-M7</version>
 				<configuration>
+				 <testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>${xmlfiles}</suiteXmlFile>
+						<suiteXmlFile>${basedir}/testngxmls/testng_LoginPageTest.xml</suiteXmlFile>
 					</suiteXmlFiles>
-					<systemPropertyVariables>
+				<!-- <systemPropertyVariables>
 						<executionBrowser>${browser}</executionBrowser>
 						<appURL>${url}</appURL>
-					</systemPropertyVariables>
+					</systemPropertyVariables>-->	
 				</configuration>
 			</plugin>
 		</plugins>
@@ -123,11 +124,5 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.3</version>
 		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.11.0</version>
-		</dependency>
-
 	</dependencies>
 </project>
