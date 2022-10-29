@@ -4,7 +4,7 @@
 	<listeners>
 		<listener class-name="com.myStore.utility.ListenerClass"></listener>
 	</listeners>
-	<test thread-count="5" name="Test">
+	<test thread-count="5" name="Test_all">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="com.myStore.testCases.SearchResultPageTest" />
