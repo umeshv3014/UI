@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
+import com.fasterxml.jackson.databind.annotation.JsonAppend.Prop;
 import com.myStore.base.BaseClass;
 import com.myStore.pageObjects.HomePage;
 import com.myStore.pageObjects.IndexPage;
@@ -25,7 +26,7 @@ public class LoginPageTest extends BaseClass {
 	@Parameters("browser")
 	public void loginTestCase(String browser) throws Throwable {
 		Log.startTestCase("loginTestCase");
-		launchApp(browser);
+		launchApp(prop.getProperty(browser));
 	}
 
 	@AfterMethod(groups = { "smoke", "sanity", "regression" })

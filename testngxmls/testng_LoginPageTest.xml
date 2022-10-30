@@ -5,7 +5,7 @@
 	<listener class-name="com.myStore.utility.ListenerClass"></listener>
 </listeners>
   <test name="loginValidation">
-  <parameter name="browser" value="chrome"></parameter>
+<parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="com.myStore.testCases.LoginPageTest"/>
     </classes>

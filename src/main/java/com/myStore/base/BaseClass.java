@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -39,7 +40,7 @@ public class BaseClass {
 	}
 
 	@BeforeSuite(groups = { "smoke", "sanity", "regression" })
-	public void loadConfig() {
+	public void loadConfig() throws UnknownHostException {
 		ExtentManager.setExtent();
 		DOMConfigurator.configure("/Users/umesh/Documents/automation/configurationsXmls/log4j.xml");
 
@@ -58,11 +59,11 @@ public class BaseClass {
 
 	public void launchApp(String browserName) {
 		// String browserName = prop.getProperty("browser");
-		if (browserName.equalsIgnoreCase("Chrome")) {
+		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			// Set Browser to ThreadLocalMap
 			driver.set(new ChromeDriver());
-		} else if (browserName.equalsIgnoreCase("FireFox")) {
+		} else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver.set(new FirefoxDriver());
 		} else if (browserName.equalsIgnoreCase("IE")) {

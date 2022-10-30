@@ -32,10 +32,10 @@
 				<configuration>
 				 <testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>${basedir}/testngxmls/testng_LoginPageTest.xml</suiteXmlFile>
+						<suiteXmlFile>${testngxml}</suiteXmlFile>
 					</suiteXmlFiles>
 				<systemPropertyVariables>
-						<executionBrowser>${browser}</executionBrowser>
+					<executionBrowser>${browser}</executionBrowser>
 						<appURL>${url}</appURL>
 					</systemPropertyVariables>
 				</configuration>
